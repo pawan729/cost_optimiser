@@ -1,0 +1,113 @@
+{
+  "project_name": "Food Delivery App",
+  "analysis": {
+    "total_monthly_cost": 13300,
+    "budget": 50000,
+    "budget_variance": -36700,
+    "is_over_budget": false,
+    "service_costs": {
+      "EC2": 13300
+    },
+    "high_cost_services": {
+      "EC2": 13300
+    }
+  },
+  "recommendations": [
+    {
+      "title": "Right-Sizing EC2 Instances",
+      "service": "AWS",
+      "current_cost": 13300,
+      "potential_savings": 2000,
+      "recommendation_type": "optimization",
+      "description": "Analyze EC2 instance utilization and right-size instances to reduce costs.  Identify underutilized instances and scale up to more powerful configurations.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Use AWS Compute Optimizer to identify underutilized instances.",
+        "Increase instance size (e.g., from t3 to m5) for critical workloads.",
+        "Implement auto-scaling to dynamically adjust instance counts based on demand."
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Optimize Database Costs (PostgreSQL)",
+      "service": "AWS",
+      "current_cost": 1000,
+      "potential_savings": 2000,
+      "recommendation_type": "optimization",
+      "description": "Review PostgreSQL database configuration and indexing.  Optimize queries and consider using read replicas to reduce database load.",
+      "implementation_effort": "medium",
+      "risk_level": "low",
+      "steps": [
+        "Analyze query performance using `EXPLAIN`.",
+        "Optimize indexes.",
+        "Consider using read replicas for read-heavy workloads."
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Leverage Free Tier for CDN (CloudFront)",
+      "service": "AWS",
+      "current_cost": 0,
+      "potential_savings": 500,
+      "recommendation_type": "network_optimization",
+      "description": "Utilize CloudFront for content delivery to reduce load on the origin server and improve performance.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "steps": [
+        "Create a CloudFront distribution.",
+        "Configure caching rules for static assets.",
+        "Monitor CDN performance."
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
+    },
+    {
+      "title": "Evaluate Azure Virtual Network",
+      "service": "Azure",
+      "current_cost": 0,
+      "potential_savings": 300,
+      "recommendation_type": "network_optimization",
+      "description": "Implement Azure Virtual Network to isolate and control network traffic, reducing potential security risks and improving performance.",
+      "implementation_effort": "medium",
+      "risk_level": "medium",
+      "steps": [
+        "Create a Virtual Network.",
+        "Configure network security groups.",
+        "Implement network isolation."
+      ],
+      "cloud_providers": [
+        "Azure"
+      ]
+    },
+    {
+      "title": "Consider GKE for Container Orchestration",
+      "service": "GCP",
+      "current_cost": 0,
+      "potential_savings": 1500,
+      "recommendation_type": "optimization",
+      "description": "Evaluate GKE for container orchestration to optimize resource utilization and reduce costs.  Consider spot instances for cost savings.",
+      "implementation_effort": "medium",
+      "risk_level": "medium",
+      "steps": [
+        "Create a GKE cluster.",
+        "Configure autoscaling.",
+        "Utilize spot instances for non-critical workloads."
+      ],
+      "cloud_providers": [
+        "GCP"
+      ]
+    }
+  ],
+  "summary": {
+    "total_potential_savings": 6300,
+    "savings_percentage": 47.37,
+    "recommendations_count": 5,
+    "high_impact_recommendations": 0
+  }
+}

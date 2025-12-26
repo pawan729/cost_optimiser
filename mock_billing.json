@@ -1,0 +1,167 @@
+[
+  {
+    "month": "2024-07",
+    "service": "EC2",
+    "resource_id": "i-web-server-01",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 3600,
+    "unit": "hours",
+    "cost_inr": 1200,
+    "desc": "Initial web server deployment for the frontend application, initial load testing."
+  },
+  {
+    "month": "2024-07",
+    "service": "EC2",
+    "resource_id": "i-db-server-01",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 1800,
+    "unit": "hours",
+    "cost_inr": 800,
+    "desc": "Database setup for PostgreSQL, initial data import."
+  },
+  {
+    "month": "2024-07",
+    "service": "EC2",
+    "resource_id": "i-load-balancer-01",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 900,
+    "unit": "hours",
+    "cost_inr": 600,
+    "desc": "Basic load balancer configuration for initial traffic distribution."
+  },
+  {
+    "month": "2024-07",
+    "service": "EC2",
+    "resource_id": "i-cache-server-01",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 600,
+    "unit": "hours",
+    "cost_inr": 400,
+    "desc": "Caching server for frequently accessed data."
+  },
+  {
+    "month": "2024-07",
+    "service": "EC2",
+    "resource_id": "i-database-server-01",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 360,
+    "unit": "hours",
+    "cost_inr": 1500,
+    "desc": "PostgreSQL database server for application data."
+  },
+  {
+    "month": "2024-07",
+    "service": "EC2",
+    "resource_id": "i-web-server-02",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 3600,
+    "unit": "hours",
+    "cost_inr": 1000,
+    "desc": "Second web server deployment, increased traffic."
+  },
+  {
+    "month": "2024-08",
+    "service": "EC2",
+    "resource_id": "i-db-server-02",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 1800,
+    "unit": "hours",
+    "cost_inr": 800,
+    "desc": "Database optimization, indexing."
+  },
+  {
+    "month": "2024-08",
+    "service": "EC2",
+    "resource_id": "i-load-balancer-02",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 900,
+    "unit": "hours",
+    "cost_inr": 600,
+    "desc": "Load balancer scaling for increased traffic."
+  },
+  {
+    "month": "2024-08",
+    "service": "EC2",
+    "resource_id": "i-cache-server-02",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 600,
+    "unit": "hours",
+    "cost_inr": 400,
+    "desc": "Caching server for frequently accessed data."
+  },
+  {
+    "month": "2024-08",
+    "service": "EC2",
+    "resource_id": "i-database-server-02",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 360,
+    "unit": "hours",
+    "cost_inr": 1500,
+    "desc": "PostgreSQL database server for application data."
+  },
+  {
+    "month": "2024-09",
+    "service": "EC2",
+    "resource_id": "i-web-server-03",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 3600,
+    "unit": "hours",
+    "cost_inr": 1200,
+    "desc": "Third web server deployment, increased bandwidth."
+  },
+  {
+    "month": "2024-09",
+    "service": "EC2",
+    "resource_id": "i-db-server-03",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 1800,
+    "unit": "hours",
+    "cost_inr": 800,
+    "desc": "Database optimization, indexing."
+  },
+  {
+    "month": "2024-09",
+    "service": "EC2",
+    "resource_id": "i-load-balancer-03",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 900,
+    "unit": "hours",
+    "cost_inr": 600,
+    "desc": "Load balancer scaling for increased traffic."
+  },
+  {
+    "month": "2024-09",
+    "service": "EC2",
+    "resource_id": "i-cache-server-03",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 600,
+    "unit": "hours",
+    "cost_inr": 400,
+    "desc": "Caching server for frequently accessed data."
+  },
+  {
+    "month": "2024-10",
+    "service": "EC2",
+    "resource_id": "i-database-server-03",
+    "region": "ap-south-1",
+    "usage_type": "Linux/UNIX (on-demand)",
+    "usage_quantity": 360,
+    "unit": "hours",
+    "cost_inr": 1500,
+    "desc": "PostgreSQL database server for application data."
+  }
+]
