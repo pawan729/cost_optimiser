@@ -1,1 +1,1 @@
-We are building a food delivery app for 10,000 users per month with a ₹50,000 monthly budget, using a Node.js backend, PostgreSQL database, object storage for images, monitoring, and basic analytics, with non-functional requirements of scalability, cost efficiency, and uptime monitoring
+We are building a scalable, cost-efficient food delivery app for ~10,000 monthly users with a ₹50,000/month budget, using a Node.js backend, PostgreSQL database, object storage for images, monitoring, basic analytics, and uptime tracking.

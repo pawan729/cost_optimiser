@@ -1,66 +1,70 @@
 {
   "project_name": "Food Delivery App",
   "analysis": {
-    "total_monthly_cost": 13300,
+    "total_monthly_cost": 5340,
     "budget": 50000,
-    "budget_variance": -36700,
+    "budget_variance": -44660,
     "is_over_budget": false,
     "service_costs": {
-      "EC2": 13300
+      "EC2": 3600,
+      "Database": 1380,
+      "Load Balancer": 360
     },
     "high_cost_services": {
-      "EC2": 13300
+      "EC2": 3600
     }
   },
   "recommendations": [
     {
       "title": "Right-Sizing EC2 Instances",
       "service": "AWS",
-      "current_cost": 13300,
-      "potential_savings": 2000,
+      "current_cost": 3600,
+      "potential_savings": 1800,
       "recommendation_type": "optimization",
       "description": "Analyze EC2 instance utilization and right-size instances to reduce costs.  Identify underutilized instances and scale up to more powerful configurations.",
       "implementation_effort": "medium",
       "risk_level": "low",
       "steps": [
-        "Use AWS Compute Optimizer to identify underutilized instances.",
-        "Increase instance size (e.g., from t3 to m5) for critical workloads.",
-        "Implement auto-scaling to dynamically adjust instance counts based on demand."
+        "Use AWS Cost Explorer to identify high-cost EC2 instances.",
+        "Analyze instance utilization metrics (CPU, memory, network I/O).",
+        "Right-size instances based on actual workload.",
+        "Consider using Spot Instances for non-critical workloads."
       ],
       "cloud_providers": [
         "AWS"
       ]
     },
     {
-      "title": "Optimize Database Costs (PostgreSQL)",
+      "title": "Optimize Database Costs",
       "service": "AWS",
-      "current_cost": 1000,
-      "potential_savings": 2000,
+      "current_cost": 1380,
+      "potential_savings": 1020,
       "recommendation_type": "optimization",
-      "description": "Review PostgreSQL database configuration and indexing.  Optimize queries and consider using read replicas to reduce database load.",
+      "description": "Review database usage patterns and optimize queries to reduce database costs. Consider using read replicas.",
       "implementation_effort": "medium",
-      "risk_level": "low",
+      "risk_level": "medium",
       "steps": [
-        "Analyze query performance using `EXPLAIN`.",
-        "Optimize indexes.",
-        "Consider using read replicas for read-heavy workloads."
+        "Analyze database query performance.",
+        "Implement caching strategies.",
+        "Consider using read replicas for read-heavy workloads.",
+        "Review database tiering policies."
       ],
       "cloud_providers": [
         "AWS"
       ]
     },
     {
-      "title": "Leverage Free Tier for CDN (CloudFront)",
+      "title": "Leverage Free Tier for CDN",
       "service": "AWS",
-      "current_cost": 0,
-      "potential_savings": 500,
+      "current_cost": 360,
+      "potential_savings": 180,
       "recommendation_type": "network_optimization",
-      "description": "Utilize CloudFront for content delivery to reduce load on the origin server and improve performance.",
+      "description": "Utilize AWS CloudFront for content delivery to reduce load on the backend and lower costs.",
       "implementation_effort": "low",
       "risk_level": "low",
       "steps": [
         "Create a CloudFront distribution.",
-        "Configure caching rules for static assets.",
+        "Configure caching rules.",
         "Monitor CDN performance."
       ],
       "cloud_providers": [
@@ -68,46 +72,46 @@
       ]
     },
     {
-      "title": "Evaluate Azure Virtual Network",
-      "service": "Azure",
-      "current_cost": 0,
-      "potential_savings": 300,
-      "recommendation_type": "network_optimization",
-      "description": "Implement Azure Virtual Network to isolate and control network traffic, reducing potential security risks and improving performance.",
-      "implementation_effort": "medium",
-      "risk_level": "medium",
-      "steps": [
-        "Create a Virtual Network.",
-        "Configure network security groups.",
-        "Implement network isolation."
-      ],
-      "cloud_providers": [
-        "Azure"
-      ]
-    },
-    {
-      "title": "Consider GKE for Container Orchestration",
+      "title": "Explore Open Source Alternatives for Load Balancing",
       "service": "GCP",
-      "current_cost": 0,
-      "potential_savings": 1500,
-      "recommendation_type": "optimization",
-      "description": "Evaluate GKE for container orchestration to optimize resource utilization and reduce costs.  Consider spot instances for cost savings.",
-      "implementation_effort": "medium",
-      "risk_level": "medium",
+      "current_cost": 360,
+      "potential_savings": 180,
+      "recommendation_type": "alternative_provider",
+      "description": "Evaluate Google Cloud Load Balancing for cost-effective load balancing.",
+      "implementation_effort": "low",
+      "risk_level": "low",
       "steps": [
-        "Create a GKE cluster.",
-        "Configure autoscaling.",
-        "Utilize spot instances for non-critical workloads."
+        "Research Google Cloud Load Balancing options.",
+        "Compare pricing and features.",
+        "Implement a simple load balancer configuration."
       ],
       "cloud_providers": [
         "GCP"
       ]
+    },
+    {
+      "title": "Optimize Proxy Usage",
+      "service": "AWS",
+      "current_cost": 360,
+      "potential_savings": 180,
+      "recommendation_type": "network_optimization",
+      "description": "Reduce unnecessary proxy usage and optimize Nginx configuration.",
+      "implementation_effort": "low",
+      "risk_level": "low",
+      "steps": [
+        "Analyze Nginx configuration.",
+        "Reduce the number of proxy connections.",
+        "Optimize caching rules."
+      ],
+      "cloud_providers": [
+        "AWS"
+      ]
     }
   ],
   "summary": {
-    "total_potential_savings": 6300,
-    "savings_percentage": 47.37,
+    "total_potential_savings": 3360,
+    "savings_percentage": 62.92,
     "recommendations_count": 5,
-    "high_impact_recommendations": 0
+    "high_impact_recommendations": 2
   }
 }
