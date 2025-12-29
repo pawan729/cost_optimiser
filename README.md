@@ -1,109 +1,165 @@
 # 📦 Cost Optimiser
 
-A Python CLI tool that simulates cloud cost estimation and optimization reports using structured project profiles and billing data.
+Cost Optimiser is a **Python-based CLI application** that simulates cloud cost estimation and optimization using **structured project profiles, synthetic billing data, and AI-generated recommendations**.
 
-This project takes a **project description**, generates a **profile JSON**, runs a **synthetic billing model**, and outputs a **cost optimization report** — helping teams estimate and optimize infrastructure costs. Ideal for demos, learning, and cost analysis workflows.
+The tool accepts a project description, converts it into a structured profile, generates mock billing data, and produces a detailed **cost optimization report**. It is ideal for **academic projects, learning cloud cost planning, and demonstrating LLM-driven automation**.
 
 ---
 
 ## 📍 Table of Contents
 
-- [About the Project](#about-the-project)  
-- [Features](#features)  
-- [Tech Stack](#tech-stack)  
-- [Repository Structure](#repository-structure)  
-- [Usage](#usage)  
-- [Example Files](#example-files)  
-- [How It Works](#how-it-works)  
-- [LLM Model Recommendation](#llm-model-recommendation)  
-- [Future Enhancements](#future-enhancements)  
-- [License](#license)
+- About the Project  
+- Key Features  
+- Tech Stack  
+- Repository Structure  
+- Installation & Usage  
+- Example Files  
+- How It Works  
+- LLM Model Usage  
+- Future Enhancements  
+- License  
 
 ---
 
 ## 🧠 About the Project
 
-Cost Optimiser is designed to simulate the **cloud cost planning lifecycle**: from receiving a project description to generating a structured project profile, producing mock billing data, and suggesting cost optimization recommendations.
+Cost Optimiser simulates the **end-to-end cloud cost planning lifecycle**:
 
-The example in this repo is based on a **food delivery app** with a ₹50,000/month budget and basic monitoring requirements.
+1. Accepting a natural language project description  
+2. Converting it into a structured JSON project profile  
+3. Generating synthetic billing data  
+4. Analyzing costs against a defined budget  
+5. Producing optimization recommendations  
+
+The reference use case included in this repository is a **food delivery application** designed for **~10,000 monthly users** with a **₹50,000/month budget**, focusing on scalability, cost efficiency, and uptime monitoring.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- Takes a *project description* as input  
-- Generates a structured *project profile JSON*  
-- Runs a mock *billing simulation*  
-- Produces a *cost optimization report*  
-- Outputs JSON files for integration and review
+- Menu-driven Command Line Interface  
+- Converts plain text descriptions into structured JSON  
+- Generates synthetic cloud billing data  
+- Produces a cost optimization report  
+- Budget variance calculation  
+- Clean and reusable JSON outputs  
+- Suitable for demos, coursework, and AI-driven tooling projects  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Language:** Python  
-- **Input/Outputs:** JSON, TXT  
-- **CLI:** Terminal-based workflow  
-- **LLM Integration:** Generates structured data from descriptions  
-(*LLM not hardcoded in the repo — see model recommendation below*)
+- Programming Language: Python  
+- Interface: CLI (Command Line Interface)  
+- Data Formats: JSON, TXT  
+- AI Platform: Gemini  
+- LLM Model: gemma-3-1b-it  
+- Architecture Style: Modular, file-based workflow  
 
 ---
 
 ## 📁 Repository Structure
 
-/
+```
+cost_optimiser/
+│
 ├── .gitignore
 ├── main.py
-├── mock_billing.json
 ├── project_description.txt
 ├── project_profile.json
+├── mock_billing.json
 ├── cost_optimization_report.json
 └── README.md
-
+```
 
 ---
 
-## 💻 Usage
+## 💻 Installation & Usage
 
 1. Clone the repository  
-   ```bash
-   git clone https://github.com/pawan729/cost_optimiser.git
-   cd cost_optimiser
+```bash
+git clone https://github.com/pawan729/cost_optimiser.git
+cd cost_optimiser
+```
 
-2.Ensure Python is installed (Python 3.8+ recommended)
-3.Run the main script
-   python main.py
-4.Follow the CLI instructions to:
-    Input new project descriptions
-    Generate profiles
-    Run cost simulation
-    View or export optimization reports
+2. Ensure Python is installed (Python 3.8 or higher recommended)  
+```bash
+python --version
+```
 
-##Example files 
-project_description.txt
-project_profile.json	
-mock_billing.json	
-cost_optimization_report.json
-    
-**How It Works**
-1.Input: A text description of a project’s goals, tech stack, and budget.
+3. Run the application  
+```bash
+python main.py
+```
 
-2.Profile Generation: Structure the input into JSON for consistent analysis.
+4. Follow the CLI menu to:
+- Enter a new project description  
+- Generate a project profile  
+- Run complete cost analysis  
+- View optimization recommendations  
+- Export reports  
 
-3.Mock Billing: Estimate costs for compute, storage, database, monitoring, and networking.
+---
 
-4.Optimization Report: Compare costs to budget and suggest savings.
+## 📄 Example Files
 
-LLM model used -> AI -> gemini and model -> gemma-3-1b-it
+- project_description.txt – Raw project description input  
+- project_profile.json – Structured project profile  
+- mock_billing.json – Synthetic cloud billing data  
+- cost_optimization_report.json – Final cost analysis and recommendations  
 
-**Future Enhancements**
-Integrate real cloud billing APIs (AWS / Azure / GCP)
-Add support for multiple projects
-Build web interface/dashboard
-Export reports in PDF/CSV
-Add cost forecasting and trends
+---
 
-**License**
-MIT License © 2025
-Feel free to use, adapt, and improve!
+## 🔍 How It Works
 
+1. Input  
+A text description containing project goals, tech stack, and budget.
+
+2. Profile Generation  
+The description is transformed into a structured JSON profile for consistent analysis.
+
+3. Synthetic Billing  
+Estimated costs are generated for compute, storage, database, monitoring, and networking.
+
+4. Optimization Report  
+Total cost is compared with the budget and optimization suggestions are generated.
+
+---
+
+## 🤖 LLM Model Usage
+
+This project uses **Google Gemini AI** for structured data generation.
+
+- Model Used: gemma-3-1b-it  
+- Purpose:
+  - Project profiling  
+  - JSON generation  
+  - Synthetic billing creation  
+  - Cost optimization recommendations  
+
+The model is instruction-tuned and well-suited for reliable structured outputs.
+
+---
+
+## 📈 Future Enhancements
+
+- Integration with real cloud billing APIs (AWS / Azure / GCP)  
+- Multi-project support  
+- Cost forecasting and trend analysis  
+- Export reports in PDF and CSV formats  
+- Web-based dashboard interface  
+
+---
+
+## 📜 License
+
+MIT License © 2025  
+
+You are free to use, modify, and distribute this project for academic, personal, or commercial purposes with attribution.
+
+---
+
+## 👤 Author
+
+Pawan Kumar Yadav  
+GitHub: https://github.com/pawan729
